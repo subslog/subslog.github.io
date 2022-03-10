@@ -530,8 +530,8 @@ tr, td, th { vertical-align: middle; }
 .notice--danger ul:last-child { margin-bottom: 0; /* override*/ }
 
 /* ========================================================================== MASTHEAD ========================================================================== */
-.masthead { position: relative; border-bottom: 1px solid #f2f3f3; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; z-index: 20; }
-.masthead__inner-wrap { clear: both; margin-left: auto; margin-right: auto; padding: 1em; max-width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; }
+.masthead { position: fixed; top:0; left:0; right:0; border-bottom: 1px solid #f2f3f3; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; z-index: 20; }
+.masthead__inner-wrap { clear: both; margin-left: auto; margin-right: auto; padding: 0em 1em 0em 1em; max-width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; background: #fff; }
 .masthead__inner-wrap::after { clear: both; content: ""; display: table; }
 @media (min-width: 80em) { .masthead__inner-wrap { max-width: 1280px; } }
 .masthead__inner-wrap nav { z-index: 10; }
@@ -583,7 +583,7 @@ tr, td, th { vertical-align: middle; }
 .page__content + .pagination, .page__meta + .pagination, .comment__date + .pagination, .page__share + .pagination, .page__comments + .pagination { margin-top: 2em; padding-top: 2em; border-top: 1px solid #f2f3f3; }
 
 /* Priority plus navigation ========================================================================== */
-.greedy-nav { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 2em; background: #fff; }
+.greedy-nav { position: relative; height: 4em; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 2em; background: #fff; }
 .greedy-nav a { display: block; margin: 0 1rem; color: #6f777d; text-decoration: none; -webkit-transition: none; transition: none; }
 .greedy-nav a:hover { color: #53595e; }
 .greedy-nav a.site-logo { margin-left: 0; margin-right: 0.5rem; }
@@ -675,7 +675,7 @@ tr, td, th { vertical-align: middle; }
 
 .search-icon { width: 100%; height: 100%; }
 
-.search-content { display: none; visibility: hidden; padding-top: 1em; padding-bottom: 1em; }
+.search-content { display: none; visibility: hidden; padding-top: 5em; padding-bottom: 1em; }
 .search-content__inner-wrap { width: 100%; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; }
 @media (min-width: 80em) { .search-content__inner-wrap { max-width: 1280px; } }
 .search-content__form { background-color: transparent; }
@@ -889,7 +889,7 @@ body:hover .visually-hidden a, body:hover .visually-hidden input, body:hover .vi
 .greedy-nav__toggle:hover.close .navicon { background: transparent; }
 
 /* Sticky, fixed to top content ========================================================================== */
-@media (min-width: 64em) { .sticky { clear: both; position: -webkit-sticky; position: sticky; top: 2em; }
+@media (min-width: 64em) { .sticky { clear: both; position: -webkit-sticky; position: sticky; top: 4em; }
   .sticky::after { clear: both; content: ""; display: table; }
   .sticky > * { display: block; } }
 
@@ -929,7 +929,7 @@ a.reversefootnote:hover { text-decoration: underline; }
 
 /* Layout specific */
 /* ========================================================================== SINGLE PAGE/POST ========================================================================== */
-#main { clear: both; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; max-width: 100%; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, "Noto Serif KR", sans-serif; }
+#main { clear: both; margin-top: 5em; margin-left: auto; margin-right: auto; padding-left: 1em; padding-right: 1em; -webkit-animation: intro 0.3s both; animation: intro 0.3s both; max-width: 100%; -webkit-animation-delay: 0.15s; animation-delay: 0.15s; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, "Noto Serif KR", sans-serif; }
 #main::after { clear: both; content: ""; display: table; }
 @media (min-width: 80em) { #main { max-width: 1280px; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, "Noto Serif KR", sans-serif; } }
 
@@ -1060,7 +1060,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 @media (min-width: 80em) { .wide .page__related { padding-right: 0; } }
 
 /* ========================================================================== ARCHIVE ========================================================================== */
-.archive { margin-top: 1em; margin-bottom: 2em; }
+.archive { margin-top: 0em; margin-bottom: 2em; }
 @media (min-width: 64em) { .archive { float: right; width: calc(100% - 200px); padding-right: 200px; } }
 @media (min-width: 80em) { .archive { width: calc(100% - 300px); padding-right: 300px; } }
 
@@ -1165,7 +1165,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 /* Default ========================================================================== */
 .sidebar { clear: both; }
 .sidebar::after { clear: both; content: ""; display: table; }
-@media (min-width: 64em) { .sidebar { float: left; width: calc(200px - 1em); opacity: 0.75; -webkit-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out; }
+@media (min-width: 64em) { .sidebar { float: left; margin-top: -1em; width: calc(200px - 1em); opacity: 0.75; -webkit-transition: opacity 0.2s ease-in-out; transition: opacity 0.2s ease-in-out; }
   .sidebar:hover { opacity: 1; }
   .sidebar.sticky { overflow-y: auto; /* calculate height of nav list viewport height - nav height - masthead x-padding
 */ max-height: calc(100vh - 2em - 2em); } }
