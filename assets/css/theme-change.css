@@ -12,25 +12,26 @@
 
 .text_click {
   border-radius: 50%;
+  box-shadow: var(--theme-box-shadow);
   width: 1.4em;
   height: 1.4em;
   font-size: 1.5em;
   text-align: center;
-  color: var(--thema-font-color);
+  color: var(--theme-font-color);
   font-weight: var(--theme-font-weight);
-  background-color: transparent;
-  -webkit-transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out;
-  transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out;
+  background-color: var(--theme-font-back);
   border: none;
 }
 
 .text_click:hover {
-  background-color: var(--theme-font-hover);
+  color: var(--theme-font-hover-color);
+  background-color: var(--theme-font-hover-back);
   border: none;
+  box-shadow: none;
 }
 
 .text_click:focus {
-  background-color: transparent;
+  background-color: var(--theme-font-back);
   outline: none;
   -webkit-animation: rotate-scale-down-center 0.5s ease-in-out both;
   animation : rotate-scale-down-center 0.5s ease-in-out both;
@@ -44,77 +45,6 @@
     transform: rotate(360deg) scale(1);
   }
 }
-
-.text_click > span {
-  content: "";
-  font-size: 1.5em;
-  color: var(--thema-font-color);
-}
-
-
-
-.switch {
-    position: fixed;
-    bottom: 2em;
-    right:2em;
-    display: inline-block;
-    width: 60px;
-    height: 34px;
-    z-index: 99999;
-  }
-  
-  .switch input { 
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
 
   /* Theme ============================================================================*/
 .page__footer-follow .social-icons i, .page__footer-follow .social-icons .svg-inline--fa { color: inherit; }
@@ -165,8 +95,11 @@
   --focus-box-shadow-out: rgba(255, 0, 0, 0.7);
   --footer-text-color: #fff;
   --theme-font-weight: initial;
-  --thema-font-color: #000;
-  --theme-font-hover: rgb(230, 230, 230, 0.7);
+  --theme-font-color: rgb(37, 42, 52, 1);
+  --theme-font-back: #fff;
+  --theme-font-hover-color: rgb(197, 197, 0);
+  --theme-font-hover-back: rgb(37, 42, 52, 1);
+  --theme-box-shadow: 0.5px 2px 3px gray;
 }
 /*dark tehme*/
 :root.dark-theme {
@@ -212,9 +145,12 @@
   --focus-box-shadow-in: rgba(234, 234, 234, 0.06);
   --focus-box-shadow-out: rgba(0, 173, 181, 0.7);
   --footer-text-color: #eaeaea;
-  --theme-font-weight: bold;
-  --thema-font-color: #f1f506;
-  --theme-font-hover: rgb(28, 31, 39, 0.7);
+  --theme-font-weight: initial;
+  --theme-font-color: #eaeaea;
+  --theme-font-back: rgb(53, 60, 75);
+  --theme-font-hover-color: rgb(197, 197, 0);
+  --theme-font-hover-back: rgb(62, 71, 90);
+  --theme-box-shadow: 0.5px 2px 3px rgb(0, 0, 0);
 }
 
 /*User system dark mode=========================================================================*/
@@ -263,9 +199,12 @@
     --focus-box-shadow-in: rgba(234, 234, 234, 0.06);
     --focus-box-shadow-out: rgba(0, 173, 181, 0.7);
     --footer-text-color: #eaeaea;
-    --theme-font-weight: bold;
-    --thema-font-color: #f1f506;
-    --theme-font-hover: rgb(28, 31, 39, 0.7);
+    --theme-font-weight: initial;
+    --theme-font-color: #eaeaea;
+    --theme-font-back: rgb(53, 60, 75);
+    --theme-font-hover-color: rgb(197, 197, 0);
+    --theme-font-hover-back: rgb(62, 71, 90);
+    --theme-box-shadow: 0.5px 2px 3px rgb(0, 0, 0);
   }
   /*light tehme*/
   :root.light-theme {
@@ -312,7 +251,10 @@
     --focus-box-shadow-out: rgba(255, 0, 0, 0.7);
     --footer-text-color: #fff;
     --theme-font-weight: initial;
-    --thema-font-color: #000;
-    --theme-font-hover: rgb(230, 230, 230, 0.7);
+    --theme-font-color: rgb(37, 42, 52, 1);
+    --theme-font-back: #fff;
+    --theme-font-hover-color: rgb(197, 197, 0);
+    --theme-font-hover-back: rgb(37, 42, 52, 1);
+    --theme-box-shadow: 0.5px 2px 3px gray;
   }
 }

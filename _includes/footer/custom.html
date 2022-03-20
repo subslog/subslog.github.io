@@ -1,7 +1,7 @@
 <!-- start custom footer snippets -->
 <label id='theme_toggle_id' class='theme_toggle'>
     <button id='toggleBtn' type='button' class="text_click">
-        <span></span>
+        <i id='toggle_font' class='fa-solid'></i>
     </button>
 </label>
 
@@ -14,27 +14,28 @@
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
     // 로컬 스토리지
     const currentTheme = localStorage.getItem('theme');
+    // fab 클래스 획득
+    const toggle_font = document.getElementById('toggle_font');
 
     // 로컬스토리지 색상 체크
     if (currentTheme == 'dark') {
-        btn.innerText='☾';
+        toggle_font.classList.add('fa-sun');
         root.classList.toggle('dark-theme');
     }
     else if (currentTheme == 'light') {
-        btn.innerText='☀';
+        toggle_font.classList.add('fa-moon');
         root.classList.toggle('light-theme');
     }
 
     // 초기 설정
-    let first_theme = btn.innerText;
-    if ( first_theme == '' ) {
+    if ( !(toggle_font.classList.contains('fa-sun') || toggle_font.classList.contains('fa-moon')) ) {
         // OS가 다크 모드이면
         if (prefersDarkScheme.matches) {
         // 다크 모드 버튼 설정
-            btn.innerText='☾';
+            toggle_font.classList.add('fa-sun');
         }
         else {
-            btn.innerText='☀';
+            toggle_font.classList.add('fa-moon');
         }
     }
     
@@ -47,10 +48,10 @@
             localStorage.setItem('theme', theme);
             //테마가 라이트 모드이면
             if ( theme == 'light' ) {
-                btn.innerText='☀';
+                toggle_font.classList.replace('fa-sun', 'fa-moon');
             }
             else {
-                btn.innerText='☾';
+                toggle_font.classList.replace('fa-moon', 'fa-sun');
             }
         }
         else {
@@ -59,10 +60,10 @@
             localStorage.setItem('theme', theme);
             //테마가 다크 모드이면
             if ( theme == 'dark' ) {
-                btn.innerText='☾';
+                toggle_font.classList.replace('fa-moon', 'fa-sun');
             }
             else {
-                btn.innerText='☀';
+                toggle_font.classList.replace('fa-sun', 'fa-moon');
             }
         }
         //포커스 해제
