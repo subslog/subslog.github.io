@@ -302,7 +302,7 @@ nav li ul, nav li ol { margin-top: 0; }
 /* backgound-color */
 html, .page__footer, .masthead__inner-wrap, .greedy-nav, p code, .btn.btn--primary, .btn.btn--primary:visited { -webkit-transition: background-color var(--transtime) ease-in-out; transition: background-color var(--transtime) ease-in-out; }
 /* color */
-.search__toggle .fas.fa-search, .taxonomy__count, b, em, p, q, figure, img, h1, h2, header, input, tr, td, form button, input[type="submit"], .highlight, .archive__item-teaser { -webkit-transition: color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out; }
+.search__toggle .fas.fa-search, .taxonomy__count, b, em, p, q, figure, img, h1, h2, header, input, tr, td, form button, input[type="submit"], .highlight, .archive__item-teaser, .page__share-title { -webkit-transition: color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out; }
 a, .archive__subtitle, .btn { -webkit-transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; }
 .notice, .notice--primary, .notice--info, .notice--warning, .notice--success, .notice--danger { -webkit-transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; }
 /*중복 제거*/
@@ -592,7 +592,7 @@ tr, td, th { vertical-align: middle; }
 .pagination li:first-child a { border-top-left-radius: 4px; border-bottom-left-radius: 4px; }
 .pagination li:last-child a { border-top-right-radius: 4px; border-bottom-right-radius: 4px; }
 .pagination--pager { display: block; padding: 1em 2em; float: left; width: 50%; font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 1em; font-weight: bold; text-align: center; text-decoration: none; color: var(--text-color); border: 1px solid var(--td-solid-color); border-radius: 4px; }
-.pagination--pager:hover { background-color: var(--text-color); color: var(--pagination-pager-hover); }
+.pagination--pager:hover { background-color: var(--text-color); color: var(--pagination-pager-hover); -webkit-transition: none; transition: none; }
 .pagination--pager:first-child { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 .pagination--pager:last-child { margin-left: -1px; border-top-left-radius: 0; border-bottom-left-radius: 0; }
 .pagination--pager.disabled { color: var(--pagination-pager-disable); pointer-events: none; cursor: not-allowed; }

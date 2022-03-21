@@ -32,6 +32,7 @@ permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+locale: ko-KR
 
 include:
   - _pages
@@ -95,7 +96,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false      # 읽는데 소요되는 시간 표시
+      show_date: true       # 포스팅 날짜 표시
       comments: true
       share: true
       related: true
@@ -113,6 +115,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-  after_footer_scripts:
-  - /assets/js/test.js
