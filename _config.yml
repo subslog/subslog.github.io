@@ -63,6 +63,9 @@ author:
   avatar : "/assets/images/bio-photo.jpg"
   bio    : "반갑습니다!"
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:rudtjq9287@nate.com"
 #    - label: "Website"
 #      icon: "fas fa-fw fa-link"
 #      url: "https://"
@@ -78,6 +81,9 @@ author:
 
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:rudtjq9287@nate.com"
 #    - label: "Twitter"
 #      icon: "fab fa-fw fa-twitter-square"
 #      url: "https://twitter.com/"
