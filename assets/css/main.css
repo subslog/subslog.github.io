@@ -303,7 +303,7 @@ nav li ul, nav li ol { margin-top: 0; }
 html, .page__footer, .masthead__inner-wrap, .greedy-nav, p code, .btn.btn--primary, .btn.btn--primary:visited { -webkit-transition: background-color var(--transtime) ease-in-out; transition: background-color var(--transtime) ease-in-out; }
 /* color */
 .search__toggle .fas.fa-search, .taxonomy__count, b, em, p, q, figure, img, h1, h2, header, input, tr, td, form button, input[type="submit"], .highlight, .archive__item-teaser, .page__share-title { -webkit-transition: color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out; }
-a, .archive__subtitle, .btn { -webkit-transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; }
+a, .archive__subtitle, .btn, .page__comments-title { -webkit-transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; }
 .notice, .notice--primary, .notice--info, .notice--warning, .notice--success, .notice--danger { -webkit-transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; }
 /*중복 제거*/
 .grid__item .archive__item .archive__item-title.no_toc a, .notice p, .notice--primary p, .notice--info p, .notice--warning p, .notice--success p, .notice--danger p { -webkit-transition: none; transition: none; }
@@ -954,8 +954,11 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 
 .initial-content, .search-content { flex: 1 0 auto; }
 
+.page__comments { float: left; margin-left: 0; margin-right: 0; width: 100%; clear: both; }
 @media (min-width: 64em) { .page { float: right; width: calc(100% - 200px); padding-right: 200px; } }
 @media (min-width: 80em) { .page { width: calc(100% - 300px); padding-right: 300px; } }
+@media (min-width: 64em) { .page__comments { float: right; width: calc(100% - 200px); padding-right: 200px; } }
+@media (min-width: 80em) { .page__comments { width: calc(100% - 300px); padding-right: 300px; } }
 .page .page__inner-wrap { float: left; margin-top: 1em; margin-left: 0; margin-right: 0; width: 100%; clear: both; }
 .page .page__inner-wrap .page__content, .page .page__inner-wrap .page__meta, .page .page__inner-wrap .comment__date, .page .page__inner-wrap .page__share { position: relative; float: left; margin-left: 0; margin-right: 0; width: 100%; clear: both; }
 
@@ -1035,9 +1038,9 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .back-to-top { display: block; clear: both; color: var(--text-color); font-size: 0.6em; text-transform: uppercase; text-align: right; text-decoration: none; }
 
 /* Comments ========================================================================== */
-.page__comments { float: left; margin-left: 0; margin-right: 0; width: 100%; clear: both; }
+/* .page__comments { float: right; margin-left: 0; margin-right: 0; padding-right: 200px; width: calc(100% - 200px); clear: both; } */
 
-.page__comments-title { margin-top: 2rem; margin-bottom: 10px; padding-top: 2rem; font-size: 0.75em; border-top: 1px solid var(--table-solid_color); text-transform: uppercase; }
+.page__comments-title { margin-top: -1rem; margin-bottom: 10px; padding-top: 2rem; font-size: 0.75em; border-top: 1px solid var(--table-solid_color); text-transform: uppercase; }
 
 .page__comments-form { -webkit-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; }
 .page__comments-form.disabled input, .page__comments-form.disabled button, .page__comments-form.disabled textarea, .page__comments-form.disabled label { pointer-events: none; cursor: not-allowed; filter: alpha(opacity=65); box-shadow: none; opacity: 0.65; }
@@ -1075,6 +1078,8 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 @media (min-width: 80em) { .wide .page { padding-right: 0; } }
 @media (min-width: 64em) { .wide .page__related { padding-right: 0; } }
 @media (min-width: 80em) { .wide .page__related { padding-right: 0; } }
+@media (min-width: 64em) { .wide .page__comments { padding-right: 0; } }
+@media (min-width: 80em) { .wide .page__comments { padding-right: 0; } }
 
 /* ========================================================================== ARCHIVE ========================================================================== */
 .archive { margin-top: 0em; margin-bottom: 2em; }
