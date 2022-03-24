@@ -311,7 +311,7 @@ a, .archive__subtitle, .btn, .page__comments-title { -webkit-transition: color v
 blockquote, .author__avatar img, .masthead, .page__share, .page__taxonomy-item, .taxonomy__section:not(:last-child), .page__related, .page__meta + .pagination, .comment__date + .pagination, .page__share + .pagination, .page__comments + .pagination { -webkit-transition: border var(--transtime) ease-in-out; transition: border var(--transtime) ease-in-out; }
 .pagination li a.current, .pagination li a.current.disabled { -webkit-transition: background-color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; transition: background-color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; }
 /* box-shadow */
-.text_click, .text_click:hover { -webkit-transition: box-shadow var(--transtime) ease-in-out, color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; transition: box-shadow var(--transtime) ease-in-out, color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out;; }
+.text_click, .text_click:hover, .top_move_click { -webkit-transition: box-shadow var(--transtime) ease-in-out, color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; transition: box-shadow var(--transtime) ease-in-out, color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out;; }
 
 /* ========================================================================== Forms ========================================================================== */
 form { margin: 0 0 5px 0; padding: 1em; background-color: var(--form-color); }
@@ -1300,3 +1300,30 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
   .u-url { font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, "Noto Serif KR", sans-serif; }
   .author__bio.p-note { font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, "Noto Serif KR", sans-serif; }
   .page__title.p-name a{ color: var(--text-color); }
+
+  /* Top move toggle */
+  .top_move_toggle { position: fixed; right: 2em; bottom: 2em; z-index: 99998; }
+  .top_move_toggle.abs { position: absolute; bottom: 9em; }
+  .top_move_click { border-radius: 50%; box-shadow: var(--theme-box-shadow); width: 1.4em; height: 1.4em; font-size: 1.5em; text-align: center; color: var(--theme-font-color); font-weight: var(--theme-font-weight); background-color: var(--theme-font-back); border: none; }
+  .top_move_click:hover {  border: none; box-shadow: none; background-color: var(--top-move-bover-back); -webkit-animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite backwards; animation: slide-top 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite backwards; }
+  @-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-70px);
+              transform: translateY(-70px);
+    }
+  }
+  @keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+    100% {
+      -webkit-transform: translateY(-70px);
+              transform: translateY(-70px);
+    }
+  }
+  .top_move_click:focus { outline: none; }

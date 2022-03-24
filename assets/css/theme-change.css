@@ -37,6 +37,14 @@
   animation : rotate-scale-down-center 0.5s ease-in-out both;
 }
 
+@-webkit-keyframes rotate-scale-down-center {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
 @keyframes rotate-scale-down-center {
   0% {
     transform: rotate(0) scale(0);
@@ -101,6 +109,7 @@
   --theme-font-hover-back: rgb(37, 42, 52, 1);
   --theme-box-shadow: 0.5px 2px 3px gray;
   --comments-theme:github-light;
+  --top-move-bover-back: rgb(228, 228, 228);
 }
 /*dark tehme*/
 :root.dark-theme {
@@ -153,6 +162,7 @@
   --theme-font-hover-back: rgb(62, 71, 90);
   --theme-box-shadow: 0.5px 2px 3px rgb(0, 0, 0);
   --comments-theme:dark-blue;
+  --top-move-bover-back: rgb(62, 71, 90);
 }
 
 /*User system dark mode=========================================================================*/
@@ -208,6 +218,7 @@
     --theme-font-hover-back: rgb(62, 71, 90);
     --theme-box-shadow: 0.5px 2px 3px rgb(0, 0, 0);
     --comments-theme:dark-blue;
+    --top-move-bover-back: rgb(62, 71, 90);
   }
   /*light tehme*/
   :root.light-theme {
@@ -260,5 +271,6 @@
     --theme-font-hover-back: rgb(37, 42, 52, 1);
     --theme-box-shadow: 0.5px 2px 3px gray;
     --comments-theme:github-light;
+    --top-move-bover-back: rgb(228, 228, 228);
   }
 }
