@@ -23,6 +23,7 @@ twitter_username: username
 github_username: username
 #minimal_mistakes_skin: contrast
 search: true
+search_full_content: true # 내용까지 검색
 
 # Build settings
 markdown: kramdown
@@ -59,9 +60,9 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "공부하는 남자"
+  name   : "subslog"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "반갑습니다!"
+  bio    : "반갑습니다!<br>공부한 것을 기록하고<br>공유하는 블로그입니다!"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -121,3 +122,5 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+date_format: "%B %d, %Y, %H:%M" # 날짜 포맷
