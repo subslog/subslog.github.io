@@ -125,3 +125,4 @@ tag_archive:
 
 date_format: "%B %d, %Y, %H:%M" # 날짜 포맷
 future: true # 포스팅 안되는 증상 해결
+published: true # 포스팅 안되는 증상 해결2
