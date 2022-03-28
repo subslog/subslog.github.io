@@ -302,7 +302,7 @@ nav li ul, nav li ol { margin-top: 0; }
 /* backgound-color */
 html, .page__footer, .masthead__inner-wrap, .greedy-nav, p code, .btn.btn--primary, .btn.btn--primary:visited { -webkit-transition: background-color var(--transtime) ease-in-out; transition: background-color var(--transtime) ease-in-out; }
 /* color */
-.search__toggle .fas.fa-search, .taxonomy__count, b, em, p, q, figure, img, h1, h2, header, input, tr, td, form button, input[type="submit"], .highlight, .archive__item-teaser, .page__share-title { -webkit-transition: color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out; }
+.search__toggle .fas.fa-search, .taxonomy__count, b, em, p, q, figure, img, h1, h2, .page__content h3, header, input, tr, td, form button, input[type="submit"], .highlight, .archive__item-teaser, .page__share-title { -webkit-transition: color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out; }
 a, .archive__subtitle, .btn, .page__comments-title { -webkit-transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; }
 .notice, .notice--primary, .notice--info, .notice--warning, .notice--success, .notice--danger { -webkit-transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; }
 /*중복 제거*/
@@ -969,7 +969,7 @@ body { display: -webkit-box; display: -ms-flexbox; display: flex; min-height: 10
 .page__lead { font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif; font-size: 1.25em; }
 
 .page__content { /* paragraph indents */ /* blockquote citations */ }
-.page__content h2 { padding-bottom: 0.5em; border-bottom: 1px solid var(--table-solid_color); }
+/* .page__content h2 { padding-bottom: 0.5em; border-bottom: 1px solid var(--table-solid_color); } */
 .page__content h1 .header-link, .page__content h2 .header-link, .page__content h3 .header-link, .page__content h4 .header-link, .page__content h5 .header-link, .page__content h6 .header-link { position: relative; left: 0.5em; opacity: 0; font-size: 0.8em; -webkit-transition: opacity 0.2s ease-in-out 0.1s; -moz-transition: opacity 0.2s ease-in-out 0.1s; -o-transition: opacity 0.2s ease-in-out 0.1s; transition: opacity 0.2s ease-in-out 0.1s; }
 .page__content h1:hover .header-link, .page__content h2:hover .header-link, .page__content h3:hover .header-link, .page__content h4:hover .header-link, .page__content h5:hover .header-link, .page__content h6:hover .header-link { opacity: 1; }
 .page__content p, .page__content li, .page__content dl { font-size: 1em; }
