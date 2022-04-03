@@ -61,7 +61,7 @@ plugins:
 
 author:
   name   : "subslog"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/jeju.jpg"
   bio    : "반갑습니다!<br>공부한 것을 기록하고<br>공유하는 블로그입니다!"
   links:
     - label: "Email"
