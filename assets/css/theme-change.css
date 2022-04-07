@@ -23,12 +23,13 @@
   border: none;
 }
 
+@media (min-width: 64em) {
 .text_click:hover {
   color: var(--theme-font-hover-color);
   background-color: var(--theme-font-hover-back);
   border: none;
   box-shadow: none;
-}
+}}
 
 .text_click:focus {
   background-color: var(--theme-font-back);
