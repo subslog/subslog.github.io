@@ -300,9 +300,9 @@ nav li ul, nav li ol { margin-top: 0; }
 /* Global animation transition ========================================================================== */
 :root { --transtime: 0.5s; }
 /* backgound-color */
-html, .page__footer, .masthead__inner-wrap, .greedy-nav, p code, .btn.btn--primary, .btn.btn--primary:visited { -webkit-transition: background-color var(--transtime) ease-in-out; transition: background-color var(--transtime) ease-in-out; }
+html, .page__footer, .masthead__inner-wrap, .greedy-nav, p code, .btn.btn--primary, .btn.btn--primary:visited, li code { -webkit-transition: background-color var(--transtime) ease-in-out; transition: background-color var(--transtime) ease-in-out; }
 /* color */
-.search__toggle .fas.fa-search, .taxonomy__count, b, em, p, q, figure, img, h1, h2, .page__content h3, header, input, tr, form button, input[type="submit"], .highlight, .archive__item-teaser, .page__share-title { -webkit-transition: color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out; }
+.search__toggle .fas.fa-search, .taxonomy__count, b, em, p, q, figure, img, h1, h2, .page__content h3, header, input, tr, form button, input[type="submit"], .highlight, .archive__item-teaser, .page__share-title, ::marker { -webkit-transition: color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out; }
 a, .archive__subtitle, .btn, .page__comments-title { -webkit-transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, border var(--transtime) ease-in-out; }
 .notice, .notice--primary, .notice--info, .notice--warning, .notice--success, .notice--danger { -webkit-transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; transition: color var(--transtime) ease-in-out, background-color var(--transtime) ease-in-out; }
 /*중복 제거*/
